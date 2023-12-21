@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BMI Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    * {
+      font-family: sans-serif;
+      padding: 0;
+      margin: 0;
+    }
+
+    body {
+      background-color: #8a8989;
+    }
+
+    .container {
+      display: flex ;
+      justify-content: center;
+      align-items: center;
+      margin-top: 5rem;
+      
+    }
+    
+    section {
+      border-radius: 2rem;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      width: 480px;
+      background-color: rgb(219, 219, 219);
+    }
+
+    .sub-con {
+      padding: 2.5rem 4rem 2.5rem 4rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: rgba(255, 255, 255);
+      width:22rem;
+      gap: 2.3rem;
+      border-bottom-left-radius: 50px;
+      border-bottom-right-radius: 50px;
+
+    }
+
+    .header-con {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      letter-spacing: 5px;
+      background-color: transparent;
+      text-align: center;
+    }
+
+    .header {
+      font-size: 2.5rem;
+      
+    }
+
+    .sub-header {
+      font-size: 1rem;
+      text-transform: uppercase;
+    }
+
+    .modal {
+      width: 350px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      gap: 1.5rem;
+    }
+
+    .bmi-value {
+      width: 40%;
+      font-size: 5rem;
+      padding: 2rem;
+      border-radius: 20px;
+      text-decoration: underline 3px;
+      text-underline-offset:10px;
+      color: rgba(255, 255, 255, 0.842);
+      box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.61);
+-webkit-box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.61);
+-moz-box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.61);
+    }
+
+    .bmi-description {
+      height: 2rem;
+      width: 100%;
+      border-left: solid white 2px;
+      border-right: solid white 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    
+
+    .input-con {
+      display: flex;
+      padding: 1rem;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .input-con>div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.5rem;
+
+      border-radius: 20px;
+      color: white;
+      box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.61);
+-webkit-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.61);
+-moz-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.61);
+    }
+
+    label {
+      font-size: 1.5rem;
+      letter-spacing: 2px;
+      
+    }
+
+    input:focus {
+      outline: none;
+      
+    }
+
+    input {
+      width: 70%;
+      height: 2.5rem;
+      font-size: 1.5rem;
+      background-color: transparent;
+      border: none;
+      border-bottom: solid white 2px;
+      color: white;
+      text-align: center;
+    }
+
+    h4 {
+      letter-spacing: 2px;
+    }
+
+    .button-con {
+      display: flex;
+      flex-direction: row-reverse;
+      padding: 0 1rem 2rem 1rem ;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    button {
+      height: 3rem;
+      width: 13.5rem;
+      border: none;
+      text-align: center;
+      border-radius: 20px;
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+
+
+    }
+    button:hover {
+      cursor: pointer;
+    }
+    
+  </style>
+</head>
+
+<body>
+  <div class="container">
+  <section class="defaultstnColor changestnColor " id="defaultstnColor">
+    
+    
+    <div class="sub-con default green red orange black ">
+      <header class=" header-con" id="heroHeader">
+        <h1 class="header">BMI</h1>
+        <h2 class="sub-header">Calculator</h2>
+      </header>
+      <div class="modal hidden changeModalColor defaultModalColor" id="modal">
+        <!-- <button class="close-modal">&times;</button> -->
+        <h3 class="bmi-value default green red orange black ">00 </h3>
+        <h3 class="bmi-description changeRsltColor defaultRsltColor"></h3>
+        
+      </div>
+    </div>
+    <div class="input-con">
+    <div class="weight-section weight-input default green red orange black">
+      <label for="inputweight">Weight</label>
+      <input type="number" id="inputweight" class="weight " type="text"  />
+      <h4>Kg/s</h4>
+    </div>
+    <div class="height-section height-input default green red orange black">
+      <label for="inputheight">Height</label>
+      <input type="number" id="inputheight" class="height" type="text"   />
+      <h4>Meters</h4>
+    </div>
+  </div>
+    <div class="button-con">
+      <button class="btnCalc default green red orange black " id="btnCalculate" >Calculate</button>
+     
+      <button class="btnReset default green red orange black " id="btnReset" >Reset</button>
+    </div>
+
+  </section>
+</div>
+  <script src="app.js"></script>
+</body>
+
+</html>

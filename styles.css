@@ -1,0 +1,23 @@
+
+   
+      .green {
+        background-color: rgb(59, 199, 134);
+      }
+  
+      .red {
+        background-color: rgb(199, 59, 59);
+      }
+  
+      .orange {
+        background-color: rgb(219, 122, 12);
+       ;
+      }
+  
+      .black {
+        background-color: rgb(66, 66, 66);
+        
+      }
+  
+      .default {
+        background-color: rgb(59, 166, 199);
+      }
